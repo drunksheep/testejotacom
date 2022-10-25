@@ -1,0 +1,125 @@
+.half {
+	@media print {
+		float: left;
+		width: 47.5%;
+	}
+
+	@media (min-width: $small-desktop-min) {
+		width: 47.5%;
+	}
+
+	& + .half {
+		@media (min-width: $tablet-max) {
+			margin-top: 20px;
+		}
+
+		&:not(:nth-child(2n+3)) {
+			@media print {
+				margin-left: 5%;
+			}
+		}
+	}
+}
+
+.half-generic {
+	@extend .half;
+
+	& + .half-generic {
+		@media (min-width: $tablet-max) {
+			margin-top: 20px;
+		}
+
+		&:not(:nth-child(2n+3)) {
+			@media (min-width: $small-desktop-min) {
+				margin-left: 5%;
+			}
+		}
+
+		&:nth-of-type(n+3) {
+			@media (min-width: $small-desktop-min) {
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+.half-child {
+	@extend .half;
+
+	& + .half-child:not(:nth-child(2n+3)) {
+		margin-left: 5%;
+	}
+
+	&.block-50 {
+		&:nth-of-type(n+3) {
+			@media (min-width: $small-desktop-min) {
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+.one-third {
+	@media print {
+		float: left;
+	}
+
+	@media (min-width: $small-desktop-min) {
+		width: 31.66%;
+	}
+}
+
+.one-third-child {
+	@extend .one-third;
+
+	& + .one-third-child:not(:nth-of-type(3n+4)) {
+		margin-left: 2.5%;
+	}
+}
+
+.one-fourth {
+	@media print {
+		float: left;
+		width: 23.75%;
+	}
+
+	@media (min-width: $small-desktop-min) {
+		width: 23.75%;
+	}
+}
+
+.one-fourth-child {
+	@extend .one-fourth;
+
+	& + .one-fourth-child {
+		@media (min-width: $tablet-max) {
+			margin-top: 30px;
+		}
+
+		&:not(:nth-of-type(4n+5)) {
+			@media (min-width: $small-desktop-min) {
+				margin-left: 1.666%;
+			}
+		}
+	}
+}
+
+.one-fifth {
+	@media print {
+		float: left;
+	}
+
+	@media (min-width: $small-desktop-min) {
+		width: 18%;
+	}
+}
+
+.one-fifth-child {
+	@extend .one-fifth;
+
+	& + .one-fifth-child:not(:nth-of-type(5n+6)) {
+		@media (min-width: $small-desktop-min) {
+			margin-left: 2.5%;
+		}
+	}
+}

@@ -1,0 +1,99 @@
+$spacings : 10px, 20px, 30px, 40px, 50px, 60px, 70px, 80px, 90px, 100px;
+
+@each $s in $spacings {
+	.pdt-#{$s} {
+		&:not(.keep-pdt) {
+			@media (max-width: $tablet-max) {
+				padding-top: ($s / 2);
+			}
+		}
+
+		&.keep-pdt {
+			padding-top: $s;
+		}
+
+		@media (min-width: $small-desktop-min) {
+			padding-top: $s;
+		}
+	}
+
+	.pdl-#{$s} {
+		&:not(.keep-pdl) {
+			@media (max-width: $tablet-max) {
+				padding-left: ($s / 2);
+			}
+		}
+
+		&.keep-pdl {
+			padding-left: $s;
+		}
+
+		@media (min-width: $small-desktop-min) {
+			padding-left: $s;
+		}
+	}
+
+	.pdr-#{$s} {
+		&:not(.keep-pdr) {
+			@media (max-width: $tablet-max) {
+				padding-right: ($s / 2);
+			}
+		}
+
+		&.keep-pdr {
+			padding-right: $s;
+		}
+
+		@media (min-width: $small-desktop-min) {
+			padding-right: $s;
+		}
+	}
+
+	.pdb-#{$s} {
+		&:not(.keep-pdb) {
+			@media (max-width: $tablet-max) {
+				padding-bottom: ($s / 2);
+			}
+		}
+
+		&.keep-pdb {
+			padding-bottom: $s;
+		}
+
+		@media (min-width: $small-desktop-min) {
+			padding-bottom: $s;
+		}
+	}
+
+	.mt-#{$s} {
+		&:not(.keep-mt) {
+			@media (max-width: $tablet-max) {
+				margin-top: ($s / 2);
+			}
+		}
+
+		&.keep-mt {
+			margin-top: $s;
+		}
+
+		@media (min-width: $small-desktop-min) {
+			margin-top: $s;
+		}
+	}
+
+	.mb-#{$s} {
+		&:not(.keep-mb) {
+			@media (max-width: $tablet-max) {
+				margin-bottom: ($s / 2);
+			}
+		}
+
+		&.keep-mb {
+			margin-bottom: $s;
+		}
+
+		@media (min-width: $small-desktop-min) {
+			margin-bottom: $s;
+		}
+	}
+}

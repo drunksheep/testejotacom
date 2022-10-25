@@ -1,0 +1,14 @@
+@import '../variables.scss';
+
+.hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: $small-desktop-min) {
+        margin-top: 127px;
+    }
+}
+
+.fullscreen {
+    min-height: calc(100vh - 127px);
+}

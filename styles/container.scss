@@ -1,0 +1,50 @@
+.center-content {
+    width: 100%;
+    margin: auto;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:not(.not-relative) {
+        position: relative;
+    }
+
+    &:not(.nopadding) {
+        @media (max-width: $tablet-max) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    &:not(.bigger) {
+        @media (min-width: $small-desktop-min) {
+            width: $contextPX;
+        }
+
+        @media print {
+            width: $contextPX !important;
+        }
+    }
+
+    &.bigger {
+        @media (min-width: $small-desktop-min) {
+            width: $contextPX;
+        }
+
+        @media (min-width: $xl-desktop-min) {
+            width: $biggerContextPX;
+        }
+    }
+
+    &.slightly-smaller {
+        @media (min-width: $small-desktop-min) {
+            width: 1088px;
+        }
+    }
+
+    .center-content {
+        @media (max-width: $tablet-max) {
+            padding: 0 !important;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+// # Container Handling #
+// ######################
+
+// base wrapper width on desktop resolutions
+$context : 1316;
+$contextPX : 1316px;
+
+// this is the container size when the resolution is smaller than $context
+$smallerContext : 1140;
+$smallerContextPX : 1140px;
+
+// a bigger version of the container,
+// commonly used on headers and footers
+$biggerContext : 1500;
+$biggerContextPX : 1500px;
+
+// # colors #
+// ##########
+
+// fonts 
+$text: #222222;
+
+// main
+$primary: #5B6ED6;
+
+// social
+$facebook: #3b5998;
+$youtube: #FF0000;
+
+// ## BREAKPOINTS ##
+// #################
+// sc ::: screen
+
+$xxl-sc : 1700px;
+$xl-sc : 1500px;
+$sc : $xl-sc - 1;
+$s-sc : 1200px;
+$xs-sc : 600px;
+$xxs-sc : xs-sc - 1;
+
+// MAX
+$mobile-max : $xxs-sc;
+$tablet-max : $s-sc;
+$small-desktop-max : $sc;
+
+// MIN
+$tablet-min : $xs-sc;
+$small-desktop-min : $s-sc;
+$xl-desktop-min : $xl-sc;
+$xxl-desktop-min : $xxl-sc;
+
+// //MINMAX
+// $tablet-minmax : 'screen and (min-width xs-sc) and (max-width s-sc)';
+// $small-desktop-minmax : 'screen and (min-width s-sc) and (max-width xl-sc)';
+// $smallest-desktop-minmax : 'screen and (min-width 998px) and (max-width 1279px)';
+// $desktop-minmax : 'screen and (min-width 1279px) and (max-width 1400px)';

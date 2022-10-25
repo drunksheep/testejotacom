@@ -1,0 +1,111 @@
+@import './variables.scss';
+@import './reset.scss';
+@import './spacing.scss';
+@import './typography.scss';
+@import './container.scss';
+@import './flex.scss';
+@import './grid.scss';
+
+// Helper Classes
+
+.transitioned-basic {
+    transition: all 0.25s ease-in-out;
+}
+
+.block {
+    display: block !important;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.mr-auto {
+    margin-right: auto;
+}
+
+.pos-r {
+    position: relative;
+}
+
+.dib {
+    display: inline-block;
+}
+
+.vat {
+    vertical-align: top;
+}
+
+.dn {
+    display: none;
+}
+
+.list-bullet {
+    list-style-type: disc;
+}
+
+.rounded {
+    border-radius: 12px;
+}
+
+.rounded-extra {
+    border-radius: 30px;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+
+// More specific definitions
+
+.first-section {
+    @media (max-width: $tablet-max) {
+        margin-top: 126px;
+        padding-top: 20px;
+    }
+
+    @media (min-width: $small-desktop-min) {
+        margin-top: 127px;
+    }
+}
+
+.scale-x-negative {
+    transform: scaleX(-1);
+}
+
+.fit-cover {
+    object-fit: cover;
+}
+
+.text-with-image {
+    .image-box {
+        @media (max-width: $tablet-max) {
+            text-align: center;
+        }
+    }
+}
+
+.noborder {
+    border: 0;
+}
+
+.is-provider-youtube {
+    iframe {
+        width: 100%;
+
+        @media (min-width: $small-desktop-min) {
+            min-height: 400px;
+        }
+    }
+}
+
+.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.cover-image {
+    object-fit: cover;
+}

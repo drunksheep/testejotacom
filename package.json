@@ -1,6 +1,8 @@
 {
-  "name": "jotacom",
+  "name": "jotacom-foodish",
   "version": "0.1.0",
+  "author": "André Facchini <andre3facchini@gmail.com> (https://github.com/drunksheep)",
+  "license": "UNLICENSED",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,9 +11,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "mysql2": "^2.3.3",
     "next": "12.3.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.55.0"
   },
   "devDependencies": {
     "eslint": "8.26.0",

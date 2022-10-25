@@ -1,0 +1,105 @@
+// ## families ##
+// ##############
+
+.t-helv {
+	font-family: 'Helvetica', sans-serif;
+}
+
+// ## t-colors ##
+// ##############
+
+.t-white {
+	color: #FFF;
+}
+
+// ## text ##
+// ##########
+$fontSizes: 10px, 12px, 14px, 16px, 18px, 20px, 22px, 24px, 26px, 28px, 30px, 32px, 34px, 36px, 38px, 40px, 96px;
+
+@each $f in $fontSizes {
+	.t-#{$f} {
+		@media (max-width: $tablet-max) {
+			font-size: ($f - 2px);
+		}
+
+		@media (min-width: $small-desktop-min) {
+			font-size: $f;
+		}
+	}
+}
+
+// ## lineheight ##
+// ################
+$lineHeights: 12px, 14px, 16px, 18px, 20px, 22px, 24px, 26px, 28px, 30px, 32px, 34px, 36px, 38px, 40px, 42px, 60px, 64px, 68px;
+
+@each $l in $lineHeights {
+	.t-#{$l} {
+		@media (max-width: $tablet-max) {
+			font-size: ($l - 2px);
+		}
+
+		@media (min-width: $small-desktop-min) {
+			font-size: $l;
+		}
+	}
+}
+
+// ## rules ##
+// ###########
+
+.t-centered {
+	text-align: center;
+}
+
+.t-upper {
+	text-transform: uppercase;
+}
+
+.t-right {
+	text-align: right;
+}
+
+// ## weights ##
+// #############
+
+.t-lig {
+	font-weight: 300;
+}
+
+.t-reg {
+	font-weight: 400;
+}
+
+.t-med {
+	font-weight: 500;
+}
+
+.t-sb {
+	font-weight: 600;
+}
+
+.t-bold {
+	font-weight: 700;
+}
+
+.t-w-black {
+	font-weight: 800;
+}
+
+.t-black-extra {
+	font-weight: 900;
+}
+
+// ## etc ##
+// #########
+a.t-und {
+	text-decoration: underline !important;
+}
+
+.t-und {
+	text-decoration: underline;
+}
+
+.t-ita {
+	font-style: italic;
+}
