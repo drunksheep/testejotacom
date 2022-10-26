@@ -1,13 +1,16 @@
-$spacings : 10px, 20px, 30px, 40px, 50px, 60px, 70px, 80px, 90px, 100px;
+$spacings : 10px,
+20px,
+30px,
+40px,
+50px,
+60px,
+70px,
+80px,
+90px,
+100px;
 
 @each $s in $spacings {
 	.pdt-#{$s} {
-		&:not(.keep-pdt) {
-			@media (max-width: $tablet-max) {
-				padding-top: ($s / 2);
-			}
-		}
-
 		&.keep-pdt {
 			padding-top: $s;
 		}
@@ -17,13 +20,15 @@ $spacings : 10px, 20px, 30px, 40px, 50px, 60px, 70px, 80px, 90px, 100px;
 		}
 	}
 
-	.pdl-#{$s} {
-		&:not(.keep-pdl) {
+	.pdt-mob-#{$s} {
+		&:not(.keep-pdt) {
 			@media (max-width: $tablet-max) {
-				padding-left: ($s / 2);
+				padding-top: $s;
 			}
 		}
+	}
 
+	.pdl-#{$s} {
 		&.keep-pdl {
 			padding-left: $s;
 		}
@@ -33,13 +38,15 @@ $spacings : 10px, 20px, 30px, 40px, 50px, 60px, 70px, 80px, 90px, 100px;
 		}
 	}
 
-	.pdr-#{$s} {
-		&:not(.keep-pdr) {
+	.pdl-mob-#{$s} {
+		&:not(.keep-pdl) {
 			@media (max-width: $tablet-max) {
-				padding-right: ($s / 2);
+				padding-left: $s;
 			}
 		}
+	}
 
+	.pdr-#{$s} {
 		&.keep-pdr {
 			padding-right: $s;
 		}
@@ -49,13 +56,15 @@ $spacings : 10px, 20px, 30px, 40px, 50px, 60px, 70px, 80px, 90px, 100px;
 		}
 	}
 
-	.pdb-#{$s} {
-		&:not(.keep-pdb) {
+	.pdr-mob-#{$s} {
+		&:not(.keep-pdr) {
 			@media (max-width: $tablet-max) {
-				padding-bottom: ($s / 2);
+				padding-right: $s;
 			}
 		}
+	}
 
+	.pdb-#{$s} {
 		&.keep-pdb {
 			padding-bottom: $s;
 		}
@@ -65,13 +74,15 @@ $spacings : 10px, 20px, 30px, 40px, 50px, 60px, 70px, 80px, 90px, 100px;
 		}
 	}
 
-	.mt-#{$s} {
-		&:not(.keep-mt) {
+	.pdb-mob-#{$s} {
+		&:not(.keep-pdb) {
 			@media (max-width: $tablet-max) {
-				margin-top: ($s / 2);
+				padding-bottom: $s;
 			}
 		}
+	}
 
+	.mt-#{$s} {
 		&.keep-mt {
 			margin-top: $s;
 		}
@@ -81,12 +92,15 @@ $spacings : 10px, 20px, 30px, 40px, 50px, 60px, 70px, 80px, 90px, 100px;
 		}
 	}
 
-	.mb-#{$s} {
+	.mt-mob-#{$s} {
 		&:not(.keep-mb) {
 			@media (max-width: $tablet-max) {
-				margin-bottom: ($s / 2);
+				margin-top: $s;
 			}
 		}
+	}
+
+	.mb-#{$s} {
 
 		&.keep-mb {
 			margin-bottom: $s;
@@ -94,6 +108,14 @@ $spacings : 10px, 20px, 30px, 40px, 50px, 60px, 70px, 80px, 90px, 100px;
 
 		@media (min-width: $small-desktop-min) {
 			margin-bottom: $s;
+		}
+	}
+
+	.mb-mob-#{$s} {
+		&:not(.keep-mb) {
+			@media (max-width: $tablet-max) {
+				margin-bottom: $s;
+			}
 		}
 	}
 }

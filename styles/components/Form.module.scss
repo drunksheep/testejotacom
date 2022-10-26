@@ -1,0 +1,13 @@
+@import '../variables.scss';
+
+.formWrapper {
+    @media ( max-width: $tablet-max ) {
+        width: 100%;
+        padding: 40px 10px;
+    }
+
+    @media ( min-width: $small-desktop-min ) {
+        max-width: 539px;
+        padding: 37px 31px;
+    }
+}

@@ -14,15 +14,17 @@
 
 // ## text ##
 // ##########
-$fontSizes: 10px, 12px, 14px, 16px, 18px, 20px, 22px, 24px, 26px, 28px, 30px, 32px, 34px, 36px, 38px, 40px, 96px;
+$fontSizes: 10px, 12px, 14px, 16px, 18px, 20px, 22px, 24px, 26px, 28px, 30px, 32px, 34px, 36px, 38px, 40px, 48px, 92px;
 
 @each $f in $fontSizes {
 	.t-#{$f} {
-		@media (max-width: $tablet-max) {
-			font-size: ($f - 2px);
-		}
-
 		@media (min-width: $small-desktop-min) {
+			font-size: $f;
+		}
+	}
+
+	.t-mob-#{$f} {
+		@media (max-width: $tablet-max) {
 			font-size: $f;
 		}
 	}
@@ -33,12 +35,14 @@ $fontSizes: 10px, 12px, 14px, 16px, 18px, 20px, 22px, 24px, 26px, 28px, 30px, 32
 $lineHeights: 12px, 14px, 16px, 18px, 20px, 22px, 24px, 26px, 28px, 30px, 32px, 34px, 36px, 38px, 40px, 42px, 60px, 64px, 68px;
 
 @each $l in $lineHeights {
-	.t-#{$l} {
-		@media (max-width: $tablet-max) {
-			font-size: ($l - 2px);
-		}
-
+	.t-lh-#{$l} {
 		@media (min-width: $small-desktop-min) {
+			font-size: $l;
+		}
+	}
+
+	.t-lh-mob-#{$l} {
+		@media (max-width: $tablet-max) {
 			font-size: $l;
 		}
 	}
@@ -57,6 +61,12 @@ $lineHeights: 12px, 14px, 16px, 18px, 20px, 22px, 24px, 26px, 28px, 30px, 32px, 
 
 .t-right {
 	text-align: right;
+}
+
+.t-centered-mob {
+	@media (max-width: $tablet-max) {
+		text-align: center;
+	}
 }
 
 // ## weights ##

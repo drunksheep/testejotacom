@@ -1,0 +1,23 @@
+@import '../backgroundColors.scss';
+@import '../variables.scss';
+@import '../flex.scss';
+
+
+.hull {
+    @extend .bg-black;
+}
+
+.centerContent {
+    @media ( max-width: $tablet-max ) {
+        min-height: 160px;
+    }
+}
+
+.socialWrapper {
+    @extend .flexed,
+    .row,
+    .wrap,
+    .jfc-center,
+    .aic-center,
+    .keep-flex;
+}

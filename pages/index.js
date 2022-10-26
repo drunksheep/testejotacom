@@ -1,6 +1,10 @@
 import Head from '../components/Head';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import CarouselSection from '../components/CarouselSection';
+import GenericSection from '../components/GenericSection';
+import EndForm from '../components/EndForm';
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -14,7 +18,11 @@ export default function Home() {
           isFirst={true}
           background={'/background.jpg'}
         />
+        <CarouselSection />
+        <GenericSection classNames={'info bg-black pdt-70px pdb-80px'} />
+        <EndForm />
       </main>
+      <Footer /> 
     </>
   )
 }

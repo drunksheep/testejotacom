@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .flexed {
     &:not(.keep-flex) {
         @media (min-width: $small-desktop-min) {

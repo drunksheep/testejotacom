@@ -1,0 +1,26 @@
+@import '../variables.scss';
+@import '../backgroundColors.scss';
+@import '../flex.scss';
+
+
+.card {
+    @extend .bg-white, .flexed, .row, .column, .wrap, .jfc-center, .aic-center, .keep-flex;
+    position: relative;
+    transition: all .35s ease;
+    position: relative;
+    min-height: 417px;
+    padding-top: 110px;
+    padding-left: 47px;
+    padding-right: 47px;
+
+    @media ( min-width: $small-desktop-min ) {
+        width: 428px;
+        margin-top: 96px;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        z-index: 3;
+        box-shadow: 0 0 5px 0 rgba(#000, .5);
+    }
+}

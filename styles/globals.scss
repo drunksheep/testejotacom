@@ -1,3 +1,5 @@
+@import url('http://fonts.cdnfonts.com/css/poppins');
+
 @import './variables.scss';
 @import './reset.scss';
 @import './spacing.scss';
@@ -5,6 +7,8 @@
 @import './container.scss';
 @import './flex.scss';
 @import './grid.scss';
+@import './components/buttons.scss';
+@import './backgroundColors.scss';
 
 // Helper Classes
 
@@ -61,8 +65,8 @@
 
 .first-section {
     @media (max-width: $tablet-max) {
-        margin-top: 126px;
-        padding-top: 20px;
+        margin-top: 84px;
+        // padding-top: 20px;
     }
 
     @media (min-width: $small-desktop-min) {
@@ -108,4 +112,51 @@
 
 .cover-image {
     object-fit: cover;
+}
+
+.swiper-slide {
+    @media (min-width: $small-desktop-min) {
+        transition: opacity .4s ease-in-out;
+        opacity: 1;
+    }
+
+    &:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-prev) {
+        @media (min-width: $small-desktop-min) {
+            opacity: 0;
+        }
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    @media (min-width: $small-desktop-min) {
+        filter: brightness(0) invert(1);
+        transition: all .35s ease;
+    }
+
+
+    &:hover {
+        @media (min-width: $small-desktop-min) {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+    }
+}
+
+.swiper-button-prev {
+    @media (min-width: $small-desktop-min) {
+        left: -60px !important;
+    }
+}
+
+.swiper-button-next {
+    @media (min-width: $small-desktop-min) {
+        right: -60px !important;
+    }
+}
+
+.min-100vh {
+    @media (min-width: $small-desktop-min) {
+        min-height: 100vh;
+    }
 }

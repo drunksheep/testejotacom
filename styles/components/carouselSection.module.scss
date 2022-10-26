@@ -1,0 +1,22 @@
+@import '../flex.scss';
+@import '../variables.scss';
+
+.CarouselSection {
+    background: url('/background2.jpg') no-repeat center center / cover;
+}
+
+.centerContent {
+    min-height: 100vh;
+
+    @media ( max-width: $tablet-max ) {
+        padding-top: calc( 39vh - 96px );
+    }
+
+    @media ( min-width: $small-desktop-min ) {
+        padding-top: calc( 26.7vh - 96px );
+    }
+}
+
+.swiperAdjust {
+    overflow: visible;
+}

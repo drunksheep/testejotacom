@@ -6,3 +6,16 @@
     width: 100%;
     z-index: 10;
 }
+
+.headerNav {
+    background-color: #FFF;
+    // box-shadow: 0 0 10px rgba(#000, .8);
+}
+
+.centerContent {
+    span {
+        @media ( max-width: $tablet-max ) {
+            display: block;
+        }
+    }
+}

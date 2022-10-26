@@ -4,7 +4,7 @@ export default function Document() {
     return (
         <Html lang='PT-BR'>
             <Head>
-                <link href="http://fonts.cdnfonts.com/css/poppins" rel="stylesheet" />
+                {/* <link href="http://fonts.cdnfonts.com/css/poppins" rel="stylesheet" /> */}
             </Head>
             <body>
                 <Main />

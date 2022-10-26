@@ -10,5 +10,11 @@
 }
 
 .fullscreen {
-    min-height: calc(100vh - 127px);
+    @media ( max-width: $tablet-max ) {
+        min-height: 100vh;
+    }
+
+    @media ( min-width: $small-desktop-min ) {
+        min-height: calc(100vh - 127px);
+    }
 }

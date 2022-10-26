@@ -1,3 +1,8 @@
+.full {
+	width: 100%;
+	display: block;
+}
+
 .half {
 	@media print {
 		float: left;
@@ -66,6 +71,16 @@
 
 	@media (min-width: $small-desktop-min) {
 		width: 31.66%;
+	}
+}
+
+.two-thirds {
+	@media print {
+		float: left;
+	}
+	
+	@media ( min-width: $small-desktop-min ) {
+		width: 63.32%;
 	}
 }
 
