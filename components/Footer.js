@@ -6,7 +6,7 @@ import insta from '../public/instagram.svg';
 export default function Footer() {
     return (
         <footer className={styles.hull}>
-            <div className={`${styles.centerContent} center-content flexed column wrap jfc-center aic-center pdt-mob-30px pdb-mob-30px`}>
+            <div className={`${styles.centerContent} center-content flexed column wrap jfc-center aic-center pdt-60px pdb-60px pdt-mob-30px pdb-mob-30px`}>
                 <p className='t-white t-22px t-lig mb-10px full t-centered'>foodish 2021</p>
                 <div className={styles.socialWrapper}>
                     <Image

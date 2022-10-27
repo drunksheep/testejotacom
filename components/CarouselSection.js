@@ -14,7 +14,8 @@ export default function CarouselSection() {
           className={styles.swiperAdjust}
           loop={true}
           centeredSlides={true}
-          navigation={true} 
+          navigation={true}
+          slidesPerView={'auto'}
           breakpoints={{
             1: {
               slidesPerView: 1, 

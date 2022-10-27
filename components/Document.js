@@ -3,9 +3,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 export default function Document() {
     return (
         <Html lang='PT-BR'>
-            <Head>
-                {/* <link href="http://fonts.cdnfonts.com/css/poppins" rel="stylesheet" /> */}
-            </Head>
+            <Head />
             <body>
                 <Main />
                 <NextScript />

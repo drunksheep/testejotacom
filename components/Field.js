@@ -1,13 +1,19 @@
 import styles from '../styles/components/field.module.scss';
 
-export default function Field({ name = '', type = 'text', classes = '', disabled = false, placeholder = '', required = false, selectOptions = [] }) {
+export default function Field({ name = '', type = 'text', classes = '', disabled = false, placeholder = '', required = false, register='', validationSchema = {}, selectOptions = [], }) {
 
     // switch porque no futuro podemos querer usar checkboxes, radios, file, etc e vão precisar de tratamento diferente
     switch (type) {
         case 'select':
             return (
-                <select name={name} className={`${styles.fieldBasic} ${classes}`} disabled={disabled} required={required}>
-                    {<option disabled defaultValue={placeholder} value={placeholder}>{placeholder}</option>}
+                <select 
+                name={name} 
+                className={`${styles.fieldBasic} ${classes}`} 
+                disabled={disabled} 
+                required={required}
+                {...register(name, validationSchema)}
+                >
+                    {<option defaultValue={placeholder} value={placeholder}>{placeholder}</option>}
                     {
                         selectOptions.map(
                             (option, idx) =>
@@ -27,6 +33,7 @@ export default function Field({ name = '', type = 'text', classes = '', disabled
                     disabled={disabled}
                     placeholder={placeholder}
                     required={required}
+                    {...register(name, validationSchema)}
                 />
             )
             break;
